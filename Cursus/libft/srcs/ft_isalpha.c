@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/26 04:16:22 by jewtwo            #+#    #+#             */
-/*   Updated: 2024/10/02 20:53:59 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/04 15:16:57 by wifons            #+#    #+#             */
+/*   Updated: 2024/11/05 16:06:06 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/ft.h"
+
 int	ft_isalpha(int c)
 {
-	return ((unsigned)c | 32) - 'a' < 26;
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
