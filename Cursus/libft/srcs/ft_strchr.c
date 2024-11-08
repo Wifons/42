@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:03:09 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 20:07:27 by wifons           ###   ########.fr       */
+/*   Updated: 2024/11/08 20:08:19 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-			return (char *)s++;
+			return (char *)s;
+		s++;
 	}
 	if (c == '\0')
 		return (char *)s;
