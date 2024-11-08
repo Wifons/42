@@ -1,4 +1,4 @@
-# 🎓 42 School Journey - [Your GitHub Username]
+# 🎓 42 School Journey - Wifons
 
 Welcome to my **42 School** repository! This repository tracks my progress, projects, and achievements as I dive deep into software development over the next three years. Here, you'll find everything from the **42 Piscine** (the intensive bootcamp) to my ongoing projects as I progress through the **Cursus**. This journey is a testament to growth, challenges, and mastery in computer science.
 
