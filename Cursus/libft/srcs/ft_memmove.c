@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:34:14 by jewtwo            #+#    #+#             */
-/*   Updated: 2024/11/08 18:44:12 by jewtwo           ###   ########.fr       */
+/*   Updated: 2024/11/08 18:48:21 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char				*dest_new;
+	unsigned char		*dest_new;
 	const unsigned char	*src_new;
 
 	if (dest == src || n == 0)
