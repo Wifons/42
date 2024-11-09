@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 20:14:09 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/09 03:17:01 by jewtwo            #+#    #+#             */
+/*   Updated: 2024/11/09 03:31:27 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	const char *last_occurence = NULL;
+	void		*ptr;
+	size_t		total_size;
 
-	while (*s)
-	{
-		if (*s == (char)c)
-			last_occurence = s;
-		s++;
-	}	
-	if (c == '\0')
-		return (char *)s;
-	return (char *)last_occurence;
+	total_size = nmemb * size;
+	if (nmemb != 0 && total_size / nmemb != size)
+		return (NULL);
+	ptr = malloc(size * nmemb);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }

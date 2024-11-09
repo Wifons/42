@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:26:44 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 16:50:10 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/08 20:41:10 by jewtwo            #+#    #+#             */
+/*   Updated: 2024/11/09 01:36:35 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*dest_new;
-	const unsigned char	*src_new;
-	size_t			i;
+	const unsigned char	*ptr1;
+	const unsigned char	*ptr2;
+	size_t				i;
 
-	if (!dest && !src)
-		return (NULL);
-	dest_new = (unsigned char *)dest;
-	src_new = (const unsigned char *)src;
+	ptr1 = (const unsigned char *)s1;
+	ptr2 = (const unsigned char *)s2;
 	i = 0;
-	while (i++ < n)
-		*dest_new++ = *src_new++;
-	return (dest);
+	while (i < n)
+	{
+		if (ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
+		i++;
+	}
+	return (0);
 }

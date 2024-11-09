@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:12:08 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 15:15:12 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
+/*   Updated: 2024/11/09 01:37:31 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*dest;
-	size_t			i;
+	const char	*last_occurence = NULL;
 
-	dest = s;
-	i = 0;
-	while (i++ < n)
-		*dest++ = 0;
+	while (*s)
+	{
+		if (*s == (char)c)
+			last_occurence = s;
+		s++;
+	}
+	if (c == '\0')
+		return ((char *)s);
+	return ((char *)last_occurence);
 }

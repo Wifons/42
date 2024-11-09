@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:03:09 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 20:10:12 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/04 15:16:57 by wifons            #+#    #+#             */
+/*   Updated: 2024/11/09 01:01:39 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_isalpha(int c)
 {
-	while (*s)
-	{
-		if (*s == (char)c)
-			return (char *)s;
-		s++;
-	}
-	if (c == '\0')
-		return (char *)s;
-	return (NULL);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

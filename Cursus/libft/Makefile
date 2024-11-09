@@ -1,9 +1,9 @@
 NAME = libft.a
-SRC = $(wildcard srcs/*.c)
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -O3
-INCLUDES = -I includes
+INCLUDES = -I
 
 all: $(NAME)
 
