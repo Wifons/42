@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/09 20:18:35 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/09 19:09:24 by jewtwo            #+#    #+#             */
+/*   Updated: 2024/11/09 19:12:58 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	const char	*last_occurence = NULL;
+	ssize_t ret;
 
-	while (*s)
-	{
-		if (*s == (char)c)
-			last_occurence = s;
-		s++;
-	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return ((char *)last_occurence);
+	if (!s)
+		return ;
+	ret = write(fd, s, ft_strlen(s));
+	(void)ret;
 }

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/09 20:18:35 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/09 18:51:20 by jewtwo            #+#    #+#             */
+/*   Updated: 2024/11/09 18:56:32 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	const char	*last_occurence = NULL;
+	size_t	i;
+	size_t	len;
 
-	while (*s)
+	if (!s || !f)
+		return;
+	len = ft_strlen(s);
+	i = 0;
+	while (i < len)
 	{
-		if (*s == (char)c)
-			last_occurence = s;
-		s++;
+		f(i, &s[i]);
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return ((char *)last_occurence);
 }

@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/09 20:18:35 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/09 18:41:59 by jewtwo            #+#    #+#             */
+/*   Updated: 2024/11/09 18:49:33 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	const char	*last_occurence = NULL;
+	char		*result;
+	size_t		len;
+	size_t		i;
 
-	while (*s)
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	result = (char *)malloc((len + 1) * sizeof(char));
+	if (!result)
+		return (NULL);
+	i = 0;
+	while (i < len)
 	{
-		if (*s == (char)c)
-			last_occurence = s;
-		s++;
+		result[i] = f(i, s[i]);
+		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)s);
-	return ((char *)last_occurence);
+	result[i] = '\0';
+	return (result);
 }

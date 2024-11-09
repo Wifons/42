@@ -6,7 +6,7 @@
 /*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:03:09 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/09 01:38:20 by jewtwo           ###   ########.fr       */
+/*   Updated: 2024/11/09 20:16:55 by jewtwo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s);
 	return (NULL);
 }
