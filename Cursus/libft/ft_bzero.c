@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:31:26 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/05 15:31:26 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/08 15:12:08 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 15:41:48 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	unsigned char	*dest;
+	size_t			i;
+
+	dest = s;
+	i = 0;
+	while (i++ < n)
+		*dest++ = 0;
 }

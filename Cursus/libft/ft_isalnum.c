@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 20:10:31 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 20:14:09 by jewtwo           ###   ########.fr       */
+/*   Created: 2024/11/05 15:31:26 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 15:35:45 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_isalnum(int c)
 {
-	const char *last_occurence = NULL;
-
-	while (*s)
-	{
-		if (*s == (char)c)
-			last_occurence = s;
-		s++;
-	}	
-	if (c == '\0')
-		return (char *)s;
-	return (char *)last_occurence;
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

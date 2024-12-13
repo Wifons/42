@@ -1,5 +1,5 @@
 NAME = libft.a
-SRC = $(wildcard srcs/*.c)
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -O3
@@ -11,7 +11,6 @@ $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 
 bonus: all
-		# Add any bonus-specific compilation steps here
 
 so:
 		$(CC) -fPIC $(CFLAGS) $(SRC) $(INCLUDES)

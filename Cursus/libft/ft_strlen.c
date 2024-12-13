@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:12:08 by wifons            #+#    #+#             */
-/*   Updated: 2024/11/08 15:15:12 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/05 15:37:28 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 15:46:47 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+size_t	ft_strlen(const char *str)
 {
-	unsigned char	*dest;
-	size_t			i;
+	size_t	i;
 
-	dest = s;
 	i = 0;
-	while (i++ < n)
-		*dest++ = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

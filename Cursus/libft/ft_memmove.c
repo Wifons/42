@@ -6,11 +6,11 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 16:34:14 by jewtwo            #+#    #+#             */
-/*   Updated: 2024/11/08 18:48:21 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 15:44:22 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
