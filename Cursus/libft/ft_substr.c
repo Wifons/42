@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 14:51:26 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:44:42 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:37:09 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	substr = (char *)malloc((len + 1) * sizeof(char));
 	if (!substr)
 		return (NULL);
-	ft_strlcpy(substr, s+ start, len + 1);
+	ft_strlcpy(substr, s + start, len + 1);
 	return (substr);
 }

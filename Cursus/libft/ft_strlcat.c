@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 18:57:25 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:48:47 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:47:08 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	src_len = ft_strlen(src);
-	if (!dst || size == 0)
+	if (!src || size == 0)
 		return (src_len);
 	dst_len = ft_strlen(dst);
 	if (size <= dst_len)

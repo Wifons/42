@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:50:51 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:47:10 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:50:27 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 void		ft_putnbr(int nb);
 void		ft_putchar(char c);

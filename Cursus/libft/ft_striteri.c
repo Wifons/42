@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 18:51:20 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:41:12 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:42:53 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	len;
 
 	if (!s || !f)
-		return;
+		return ;
 	len = ft_strlen(s);
 	i = 0;
 	while (i < len)

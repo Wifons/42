@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 19:09:24 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:42:27 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 17:33:17 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	ssize_t ret;
+	ssize_t	ret;
 
 	if (!s)
 		return ;
