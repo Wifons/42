@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: inyancat <inyancat@student.42.fr>          +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created  2016/11/11 16:47:32 by inyancat          #+#    #+#             */
-/*   Updated  2016/11/12 20:21:42 by inyancat         ###   ########.fr       */
+/*   Created: 2024/11/09 18:58:17 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 16:42:09 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "utils.h"
-#include <stdarg.h>
-extern int g_log_fd;
+#include "libft.h"
 
-void error(int code, int a, const char *pattern, ...)
+void	ft_putchar_fd(char c, int fd)
 {
-	va_list	va;
+	ssize_t ret;
 
-	va_start(va, pattern);
-	(void)a;
-	vdprintf(g_log_fd, pattern, va);
-	dprintf(g_log_fd, "\n");
-	va_end(va);
-	exit(code);
+	ret = write(fd, &c, 1);
+	(void)ret;
 }

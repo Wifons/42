@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:29:03 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 15:43:04 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 16:39:53 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	size_t				i;
 
 	ptr = (const unsigned char *)s;
-	uc = (unsigned char) c;
+	uc = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{

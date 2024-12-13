@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:31:26 by wifons            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/12/13 15:35:45 by wifons           ###   ########.fr       */
-=======
-/*   Updated: 2024/11/09 01:01:36 by jewtwo           ###   ########.fr       */
->>>>>>> e38304fc4deb9df563c297fb403e792db7dae4b7
+/*   Created: 2024/11/09 19:36:49 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 16:42:19 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	unsigned int	num;
+
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		num = -n;
+	}
+	else
+		num = n;
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	ft_putchar_fd((num % 10) + '0', fd);
 }
+

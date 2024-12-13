@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 15:26:44 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:41:53 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/09 03:17:01 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 16:41:20 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	unsigned char		*dest_new;
-	const unsigned char	*src_new;
-	size_t				i;
+	void		*ptr;
+	size_t		total_size;
 
-	if (!dest && !src)
+	total_size = nmemb * size;
+	if (nmemb != 0 && total_size / nmemb != size)
 		return (NULL);
-	dest_new = (unsigned char *)dest;
-	src_new = (const unsigned char *)src;
-	i = 0;
-	while (i++ < n)
-		*dest_new++ = *src_new++;
-	return (dest);
+	ptr = malloc(size * nmemb);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total_size);
+	return (ptr);
 }

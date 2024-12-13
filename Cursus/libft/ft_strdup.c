@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jewtwo <jewtwo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:31:26 by wifons            #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2024/12/13 15:35:45 by wifons           ###   ########.fr       */
-=======
-/*   Updated: 2024/11/09 01:01:36 by jewtwo           ###   ########.fr       */
->>>>>>> e38304fc4deb9df563c297fb403e792db7dae4b7
+/*   Created: 2024/11/09 03:35:25 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 16:42:37 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+char	*ft_strdup(const char *s)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	char		*dup;
+	size_t		len;
+
+	len = ft_strlen(s);
+	dup = (char *)malloc((len + 1) * sizeof(char));
+	if (!dup)
+		return (NULL);
+	ft_memcpy(dup, s, len + 1);
+	return (dup);
 }

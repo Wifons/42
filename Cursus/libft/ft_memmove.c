@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/08 16:34:14 by jewtwo            #+#    #+#             */
-/*   Updated: 2024/12/13 15:44:22 by wifons           ###   ########.fr       */
+/*   Created: 2024/11/08 16:34:14 by wifons            #+#    #+#             */
+/*   Updated: 2024/12/13 16:42:01 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*dest_new;
-	const unsigned char	*src_new;
+	unsigned char				*dest_new;
+	const unsigned char			*src_new;
 
 	if (dest == src || n == 0)
 		return (dest);

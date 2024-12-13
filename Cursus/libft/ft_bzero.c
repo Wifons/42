@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 15:12:08 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 15:41:48 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 16:35:43 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*dest;
-	size_t			i;
+	unsigned char		*dest;
+	size_t				i;
 
 	dest = s;
 	i = 0;
