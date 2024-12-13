@@ -6,7 +6,7 @@
 /*   By: wifons <wifons@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 15:50:51 by wifons            #+#    #+#             */
-/*   Updated: 2024/12/13 16:45:22 by wifons           ###   ########.fr       */
+/*   Updated: 2024/12/13 16:47:10 by wifons           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stddef.h>
 # include <unistd.h>
 
 void		ft_putnbr(int nb);
